@@ -32,7 +32,7 @@
       }
       display_text = text.replace(/^[0-9.\s]+/,'');
       id = count+'-'+display_text.toLowerCase().replace(/[^a-zA-Z]+/g, '-').replace(/^[\-]+|[\-]+$/, '');
-      $$.append(' <small><a id="'+id+'" href="#'+id+'">#</a></small>');
+      $$.attr('id', id).append(' <small><a href="#'+id+'">#</a></small>');
       toc += '<li><a href="#'+id+'">'+display_text+'</a>';
 
       level = current_level;
